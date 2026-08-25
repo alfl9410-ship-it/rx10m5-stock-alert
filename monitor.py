@@ -2,6 +2,7 @@ import os
 import re
 import hashlib
 import requests
+from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 TARGET_URL = os.getenv("TARGET_URL", "https://store.sony.co.kr/")
