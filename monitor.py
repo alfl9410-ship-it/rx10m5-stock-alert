@@ -133,21 +133,4 @@ def main():
     state_file.write_text(status)
 
 if __name__ == "__main__":
-    import time
-
-    end_time = time.time() + (30 * 60)
-
-    while time.time() < end_time:
-        main()
-
-        # 재고가 발견되면 main()에서 텔레그램을 보냈으므로 종료
-        try:
-            current_status = Path("last_status.txt").read_text().strip()
-            if current_status == "IN_STOCK":
-                print("IN_STOCK detected. Monitoring stopped.")
-                break
-        except Exception:
-            pass
-
-        print("Waiting 5 minutes before next check...")
-        time.sleep(300)
+    main()
