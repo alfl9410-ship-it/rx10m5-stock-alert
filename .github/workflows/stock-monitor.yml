@@ -40,5 +40,4 @@ jobs:
           git config user.name "rx10m5-stock-bot"
           git config user.email "actions@users.noreply.github.com"
           git add last_status.txt
-          git diff --cached --quiet || git commit -m "Update RX10M5 stock status"
-          git push
+          git diff --cached --quiet || (git commit -m "Update RX10M5 stock status" && git pull --rebase && git push)
