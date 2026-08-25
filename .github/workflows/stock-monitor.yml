@@ -5,7 +5,7 @@ on:
   schedule:
     # GitHub Actions는 정확히 5분마다 실행된다고 보장하지 않습니다.
     # 지연이 생길 수 있으므로 '근접 실시간' 모니터링입니다.
-    - cron: "*/5 * * * *"
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
 
 permissions:
   contents: write
