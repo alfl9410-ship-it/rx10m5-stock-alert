@@ -1,9 +1,9 @@
 name: RX10M5 stock monitor
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
