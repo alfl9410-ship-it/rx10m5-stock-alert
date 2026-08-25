@@ -14,7 +14,12 @@ READY_PATTERNS = [
     r"구매하기", r"장바구니", r"바로구매", r"주문하기", r"구매 가능"
 ]
 SOLDOUT_PATTERNS = [
-    r"품절", r"일시품절", r"재고 없음", r"판매 종료", r"판매중지"
+    r"품절",
+    r"일시품절",
+    r"재고 없음",
+    r"판매 종료",
+    r"판매중지",
+    r"재입고 알림"
 ]
 
 def send_telegram(message: str):
