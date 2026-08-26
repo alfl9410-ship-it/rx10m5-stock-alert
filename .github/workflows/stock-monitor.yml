@@ -5,18 +5,13 @@ on:
     - cron: '*/5 * * * *'   # 매 5분마다 실행
   workflow_dispatch:        # 수동 실행도 가능
 
-jobs:
-  run_every_5m:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo
-
 permissions:
   contents: write
 
 jobs:
+  run_every_5m:
   monitor:
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
