@@ -9,7 +9,6 @@ permissions:
   contents: write
 
 jobs:
-  run_every_5m:
   monitor:
       runs-on: ubuntu-latest
     steps:
